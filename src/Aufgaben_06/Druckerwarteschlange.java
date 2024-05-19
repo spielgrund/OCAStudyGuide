@@ -9,8 +9,8 @@ public class Druckerwarteschlange {
         warteschlange.add(dokument);
     }
     public void process(){
-        System.out.println(warteschlange.getFirst());
-        warteschlange.removeFirst();
+        //System.out.println(warteschlange.getFirst());
+        //warteschlange.removeFirst();
     }
 
     @Override
