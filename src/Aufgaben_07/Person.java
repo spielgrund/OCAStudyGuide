@@ -6,10 +6,16 @@ public class Person {
     private String vorname;
     private String nachname;
     private LocalDate geburtstag;
+    private String wohnort;
     public Person(String vorname, String nachname){
         this.vorname = vorname;
         this.nachname = nachname;
+    }
 
+    public Person(String vorname, String nachname, String wohnort){
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.wohnort = wohnort;
     }
 
     public Person(String vorname, String nachname,int jahr,int monat, int tag){
@@ -41,6 +47,14 @@ public class Person {
 
     public void setGeburtstag(LocalDate geburtstag) {
         this.geburtstag = geburtstag;
+    }
+
+    public String getWohnort() {
+        return wohnort;
+    }
+
+    public void setWohnort(String wohnort) {
+        this.wohnort = wohnort;
     }
 
     @Override
