@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.function.Predicate;
 
-public class Aufgabe_0710 {
+public class Aufgaben_0710 {
     public static void main(String[] args) {
         Termin t1 = new Termin("Zahnarzt", "Beispielweg 1", 2024,6,1);
         Termin t2 = new Termin("Fussball", "Stadion", 2024,5,5);

@@ -1,12 +1,11 @@
 package Aufgaben_07;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BinaryOperator;
 
-public class Aufgabe_0709 {
+public class Aufgaben_0709 {
     public static void main(String[] args) {
         Person p1 = new Person("Max","Maxson",1990,05,29);
         Person p2 = new Person("Peter", "Peterson", 1960, 05, 15);
