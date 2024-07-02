@@ -1,0 +1,40 @@
+It looks like you're encountering an issue with input redirection (`<`) in PowerShell. Unlike Unix-based shells (like Bash), PowerShell does not support input redirection in the same way, which is why you're seeing the error message.
+
+### Solution: Using PowerShell to Redirect Input
+
+To work around this in PowerShell, you can use the `Get-Content` cmdlet to read the contents of the file and then pipe (`|`) that content into your Java program. Here’s how you can modify your command:
+
+1. **Navigate to the directory containing your compiled Java classes (`bin/` in this case):**
+   ```sh
+   cd C:\Users\Tim\IdeaProjects\OCAStudyGuide\bin
+   ```
+
+2. **Run the Java program with input from a file:**
+   Use PowerShell's `Get-Content` to read the file contents and pipe it into your Java program:
+   ```sh
+   Get-Content C:\path\to\BeispielText.txt | java Aufgaben_08.Aufgaben_0803
+   ```
+   Replace `C:\path\to\BeispielText.txt` with the actual path to your text file.
+
+### Example
+
+Assuming your current directory is `C:\Users\Tim\IdeaProjects\OCAStudyGuide\bin` and your text file `BeispielText.txt` is located elsewhere:
+
+1. **Navigate to the directory:**
+   ```sh
+   cd C:\Users\Tim\IdeaProjects\OCAStudyGuide\bin
+   ```
+
+2. **Run the Java program with input from file:**
+   ```sh
+   Get-Content C:\path\to\BeispielText.txt | java Aufgaben_08.Aufgaben_0803
+   ```
+   Replace `C:\path\to\BeispielText.txt` with the actual path to your `BeispielText.txt` file.
+
+### Notes
+
+- PowerShell uses `Get-Content` for reading file contents and `|` (pipe) for passing them as input to commands.
+- Ensure that the path to `BeispielText.txt` is correct and accessible from PowerShell.
+- This approach allows you to effectively redirect input to your Java program from a file using PowerShell's capabilities.
+
+Get-Content C:\Users\Tim\IdeaProjects\OCAStudyGuide\src\BeispielText.txt | java Aufgaben_08.Aufgaben_0803
