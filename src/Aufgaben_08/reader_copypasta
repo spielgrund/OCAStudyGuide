@@ -1,0 +1,45 @@
+// Specify the path to the file
+        String filePathIn = "daten.txt";
+                String filePathOut = "output.txt";
+
+                // Create a BufferedReader in a try-with-resources statement
+                try (BufferedReader br = new BufferedReader(new FileReader(filePathIn));
+                        BufferedWriter bw = new BufferedWriter(new FileWriter(filePathOut))) {
+                    String line;
+                    // Read and print each line of the file
+                    while ((line = br.readLine()) != null) {
+                        System.out.println(line);
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                ////////////////////////////////////////////////////////////////////////////
+                String filePath = "path/to/your/inputfile.txt";
+
+                        // Create an InputStream
+                        try (InputStream inputStream = new FileInputStream(filePath)) {
+                            int data;
+                            // Read and print each byte of the file
+                            while ((data = inputStream.read()) != -1) {
+                                System.out.print((char) data);
+                            }
+                        } catch (IOException e) {
+                            // Handle exceptions here
+                            e.printStackTrace();
+                        }
+                    }
+                //////////////////////////////////////////////////////////////////////////////////7
+                // Specify the path to the file
+                        String filePath = "path/to/your/outputfile.txt";
+
+                        // Create an OutputStream
+                        try (OutputStream outputStream = new FileOutputStream(filePath)) {
+                            // Write some bytes to the file
+                            String data = "Hello, world!";
+                            outputStream.write(data.getBytes());
+                        } catch (IOException e) {
+                            // Handle exceptions here
+                            e.printStackTrace();
+                        }
+

@@ -1,0 +1,4 @@
+Hallo, dies ist ein bisschen längerer Text. Wir müssen ja schlieslich die 16 Bytes vollbekommen.
+Haben Sie noch weitere Anmerkungen? Möchten Sie vielleicht über das Wetter reden?
+Wir hätten auch noch Kuchen im Angebot.
+Vielen Dank für Ihre Zeit!
