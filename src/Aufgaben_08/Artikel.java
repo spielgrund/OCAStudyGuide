@@ -27,6 +27,16 @@ public class Artikel implements Serializable {
         dos.writeInt(bestand);
     }
 
+    public void store(String name) throws IOException{
+        //TODO store soll das Objekt this serialisieren und in die Datei anme schreiben.
+
+    }
+
+    public static Artikel load(String name) throws IOException, ClassNotFoundException{
+        //TODO load soll das Objekt durch Deserialisierun wieder Rekonstruieren
+        return null;
+    }
+
     public int getNr() {
         return nr;
     }
