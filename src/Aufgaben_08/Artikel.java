@@ -27,14 +27,31 @@ public class Artikel implements Serializable {
         dos.writeInt(bestand);
     }
 
+
+
+
     public void store(String name) throws IOException{
-        //TODO store soll das Objekt this serialisieren und in die Datei anme schreiben.
+        //TODO store soll das Objekt this serialisieren und in die Datei name schreiben.
+        // Schreiben des Artikels in eine Datei
+
+        try(ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(name))){
+
+            objectOutputStream.writeObject(this);
+            objectOutputStream.flush();
+
+        }
+
 
     }
 
     public static Artikel load(String name) throws IOException, ClassNotFoundException{
         //TODO load soll das Objekt durch Deserialisierun wieder Rekonstruieren
-        return null;
+
+        // Lesen des Artikels aus der Datei
+        try(ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(name))){
+            Artikel a = (Artikel) objectInputStream.readObject();
+            return a;
+        }
     }
 
     public int getNr() {
