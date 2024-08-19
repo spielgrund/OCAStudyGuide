@@ -1,5 +1,6 @@
 package Aufgaben_08;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
